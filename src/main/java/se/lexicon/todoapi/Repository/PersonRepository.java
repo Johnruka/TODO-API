@@ -1,6 +1,7 @@
 package se.lexicon.todoapi.Repository;
 
 import jakarta.transaction.Transactional;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -10,12 +11,10 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface PersonRepository {
+public interface PersonRepository extends JpaRepository<Person,Long> {
 
 
-    static Person Create(Person person) {
-        return person;
-    }
+
 
     //find all persons who have no task
     @Query("select p from Person p where SIZE(p.tasks) = 0 ")
@@ -35,5 +34,5 @@ public interface PersonRepository {
     void updatePersonNameById(Long id, String name);
 
 
-    Optional<Object> findById(Long id);
+
 }
