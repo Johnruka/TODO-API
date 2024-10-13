@@ -8,17 +8,9 @@ import se.lexicon.todoapi.domain.entity.Task;
 @Component
 public interface TaskConverter {
 
-    Task toTaskSave(TaskDTOForm dto);
+    TaskDTOView toTaskDTO(TaskDTOView entity);
 
-    Task toTaskForm(TaskDTOForm dto);
+    Task toEntity(TaskDTOForm dto);
 
-    TaskDTOView toTaskDTOView(Task entity);
 
-    TaskDTOView toTaskDTOViewWithoutPerson(Task entity);
-
-    TaskDTOView toTaskDTOViewForm(TaskDTOForm dto);
-
-    TaskDTOForm toTskDTOForm(TaskDTOForm dto);
-
-    TaskDTOForm toTaskDTOForm(Task entity);
 }
