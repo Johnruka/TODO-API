@@ -8,7 +8,7 @@ import se.lexicon.todoapi.domain.entity.Role;
 @Component
 public interface RoleConverter {
 
-    RoleDTOView toRoleDTO(RoleDTOView entity);
+    RoleDTOView toRoleDTO(Role entity);
 
     Role toEntity(RoleDTOForm dto);
 }
