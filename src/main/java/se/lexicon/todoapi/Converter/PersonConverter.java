@@ -8,7 +8,7 @@ import se.lexicon.todoapi.domain.entity.Person;
 @Component
 public interface PersonConverter {
 
-    PersonDTOView toRoleDTO(PersonDTOView entity);
+    PersonDTOView toPersonDTO(PersonDTOView entity);
 
     Person toEntity(PersonDTOForm dto);
 
