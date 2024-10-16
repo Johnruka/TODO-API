@@ -28,4 +28,14 @@ public class Task {
     @JoinColumn(name = "person_id")
     private Person person;
 
+
+    public Task(String s, String s1, LocalDate localDate) {
+    }
+
+    public Task(String s, String s1, LocalDate today, Person person) {
+    }
+
+    public Task(String s, String s1, LocalDate localDate, boolean b, Person person) {
+    }
 }
+
