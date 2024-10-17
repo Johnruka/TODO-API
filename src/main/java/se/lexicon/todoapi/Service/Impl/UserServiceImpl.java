@@ -110,5 +110,7 @@ public class UserServiceImpl implements UserService {
     public void enableByEmail(String email) {
         if (!userRepository.existsByEmail(email)) throw new dataNotFoundException("Email does not exist");
     }
+
+
 }
 
